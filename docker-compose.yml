@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  memo.escrm.service.order:
+    image: ${DOCKER_REGISTRY-}memoescrmserviceorder
+    build:
+      context: .
+      dockerfile: Memo.EScrm/src/Services/Memo.EScrm.Service/Dockerfile
+
+  memo.escrm.admin:
+    image: ${DOCKER_REGISTRY-}memoescrmadmin
+    build:
+      context: .
+      dockerfile: Memo.EScrm/src/Web/Memo.EScrm.Admin/Dockerfile
+
